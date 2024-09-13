@@ -18,7 +18,7 @@ const Sonnet = ({ sonnetsmalltitle, sonnettitle, sonnetparagraph, icon1, icon2, 
 
     return (
         <>
-            <div className='max-md:py-[40px] md:py-[60px] lg:py-[80px] xl:py-[95px] bg-[#F4F7F9]'>
+            <div id='sonnet' className='max-md:py-[40px] md:py-[60px] lg:py-[80px] xl:py-[95px] bg-[#F4F7F9]'>
                 <div className='container'>
                     <div className='flex max-lg:flex-col-reverse items-center lg:gap-[50px] xl:gap-[0px]'>
                         <div className='w-full xl:max-w-[620px] max-lg:mt-[30px]'>

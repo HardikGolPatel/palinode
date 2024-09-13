@@ -4,7 +4,7 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 const Customersreview = ({ items, customersreviewsmalltitle, customerstitle }) => {
     return (
         <>
-            <div className='max-md:pt-[30px] md:pt-[30px] lg:pt-[40px] xl:pt-[57px] max-md:pb-[30px] md:pb-[50px] lg:pb-[70px] xl:pb-[100px] bg-custom-gradient'>
+            <div id='results' className='max-md:pt-[30px] md:pt-[30px] lg:pt-[40px] xl:pt-[57px] max-md:pb-[30px] md:pb-[50px] lg:pb-[70px] xl:pb-[100px] bg-custom-gradient'>
                 <div className='container'>
                     <div>
                         <span className='block text-center text-[#87A83B] font-poppins text-[16px] font-semibold leading-normal uppercase'>{customersreviewsmalltitle}</span>

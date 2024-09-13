@@ -18,7 +18,7 @@ const Reachout = ({ reachoutimg, reachoutsmalltitle, reachoutmaintitle, reachout
 
     return (
         <>
-            <div className='max-md:pt-[10px] md:pt-[20px] lg:pt-[35px] xl:pt-[50px] max-md:pb-[30px] md:pb-[70px] lg:pb-[100px] xl:pb-[135px]'>
+            <div id='about' className='max-md:pt-[10px] md:pt-[20px] lg:pt-[35px] xl:pt-[50px] max-md:pb-[30px] md:pb-[70px] lg:pb-[100px] xl:pb-[135px]'>
                 <div className='container'>
                     <div className='flex items-center max-lg:flex-col lg:flex-row lg:gap-[60px] xl:gap-[80px] xxl:gap-[120px]'>
                         <div className='w-full max-lg:max-w-[100%] lg:max-w-[520px] max-md:h-[300px] md:h-[400px] lg:h-[100%]'>

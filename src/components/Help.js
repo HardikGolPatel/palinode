@@ -19,7 +19,7 @@ const Help = ({ helpsmalltitle, helptitle, helpinfo, arrow, btn1, btn2 }) => {
 
     return (
         <>
-            <div className='max-md:py-[35px] md:py-[60px] lg:py-[75px] xl:py-[93px] bg-blue-gradient'>
+            <div id='contact' className='max-md:py-[35px] md:py-[60px] lg:py-[75px] xl:py-[93px] bg-blue-gradient'>
                 <div className='container'>
                     <div className='max-sm:text-center'>
                         <span className='block font-poppins text-center text-[#D2DC28] text-[16px] font-semibold leading-normal uppercase'>{helpsmalltitle}</span>
