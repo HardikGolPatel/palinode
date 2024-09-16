@@ -50,7 +50,7 @@ const Footer = ({ logo, info, menu1, menu2, menu3, menu4, mail, requestbtn, link
                                 </div>
                                 <div className='mt-[20px]'>
                                     <ul className='flex max-md:justify-center'>
-                                        <li><Link to="/" target="_blank" rel="noopener noreferrer" className='w-[50px] h-[50px] inline-flex justify-center items-center border border-solid border-[#E5EBF0] rounded-[50%] text-[#004664] text-[20px] hover:bg-green hover:border-green transition-all duration-[0.4s]'><FontAwesomeIcon icon={faLinkedinIn} /></Link></li>
+                                        <li><Link to="/" target="_blank" rel="noopener noreferrer" className='max-lg:w-[40px] max-lg:h-[40px] w-[50px] h-[50px] inline-flex justify-center items-center border border-solid border-[#E5EBF0] rounded-[50%] text-[#004664] max-lg:text-[16px] text-[20px] hover:bg-green hover:border-green transition-all duration-[0.4s]'><FontAwesomeIcon icon={faLinkedinIn} /></Link></li>
                                     </ul>
                                 </div>
                             </div>
