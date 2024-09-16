@@ -21,7 +21,7 @@ const Footer = ({ logo, info, menu1, menu2, menu3, menu4, mail, requestbtn, link
 
     return (
         <>
-            <div className='max-md:pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[63px] max-md:pb-[20px] md:pb-[20px] lg:pb-[20px] xl:pb-[20px]'>
+            <div className='max-md:pt-[30px] md:pt-[35px] lg:pt-[45px] xl:pt-[50px] max-md:pb-[20px] md:pb-[20px] lg:pb-[20px] xl:pb-[20px]'>
                 <div className='container'>
                     <div>
                         <div className='flex max-md:flex-col justify-between items-center'>
