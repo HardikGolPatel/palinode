@@ -10,7 +10,7 @@ const Banner = ({ bannersmalltitle, bannerimg, bannermainheading, bannerparagrap
         setActiveModal(modalType);
         setIsModalOpen(true);
     };
-
+ 
     const closeModal = () => {
         setIsModalOpen(false);
         setActiveModal('');
@@ -18,7 +18,7 @@ const Banner = ({ bannersmalltitle, bannerimg, bannermainheading, bannerparagrap
 
     return (
         <>
-            <div className='relative'>
+            <div className='relative max-sm:mt-[75px] mt-[86px]'>
                 <div className='md:w-full h-[400px] sm:h-[400px] md:h-full'>
                     <img src={bannerimg} alt="banner" className="object-cover w-full max-w-[100%] h-full" />
                 </div>
