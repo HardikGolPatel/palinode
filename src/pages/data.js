@@ -26,7 +26,7 @@ export const LogoSliderObj = {
     logosliderimg15: require('../images/logosliderimg15.png'),
     logosliderimg16: require('../images/logosliderimg16.png'),
     logosliderimg17: require('../images/logosliderimg17.png'),
-    logoslidertitle: 'Thrusted by our partners',
+    logoslidertitle: 'Trusted by our partners',
 }
 
 export const ReachoutObj = {

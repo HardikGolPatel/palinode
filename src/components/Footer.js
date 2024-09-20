@@ -1,8 +1,10 @@
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Requestmodal from './Requestmodal'
+import Reachoutmodal from './Reachoutmodal';
 
 const Footer = ({ logo, info, menu1, menu2, menu3, menu4, mail, requestbtn, linkedinicon }) => {
 
@@ -18,6 +20,9 @@ const Footer = ({ logo, info, menu1, menu2, menu3, menu4, mail, requestbtn, link
         setIsModalOpen(false);
         setActiveModal('');
     };
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
 
     return (
         <>
@@ -26,8 +31,8 @@ const Footer = ({ logo, info, menu1, menu2, menu3, menu4, mail, requestbtn, link
                     <div>
                         <div className='flex max-md:flex-col justify-between items-center'>
                             <div>
-                                <div className='inline-block lg:max-w-[164px] max-md:flex max-md:justify-center'>
-                                    <Link to="/"><img src={logo} alt="logo" /></Link>
+                                <div className='inline-block lg:max-w-[164px] max-md:flex max-md:justify-center cursor-pointer'>
+                                    <img src={logo} alt="logo" onClick={scrollToTop} />
                                 </div>
                                 <div className='mt-[20px] w-full max-md:text-center max-md:mx-auto max-w-[260px]'>
                                     <p className='font-poppins text-[#45647B] text-[16px] font-normal leading-[162%]'>{info}</p>
@@ -35,10 +40,26 @@ const Footer = ({ logo, info, menu1, menu2, menu3, menu4, mail, requestbtn, link
                             </div>
                             <div className='max-md:mt-[30px] md:ml-[-50px] lg:ml-[-50px] xl:ml-[-87px]'>
                                 <ul className='flex max-lg:flex-col max-lg:items-center'>
-                                    <li className='inline-flex max-lg:mb-[20px] lg:mr-[40px] max-lg:mr-[0px] xl:mr-[70px] font-poppins text-[#45647B] hover:text-green text-[14px] font-medium leading-[142%] uppercase transition-all duration-[0.4s]'><Link to="/">{menu1}</Link></li>
-                                    <li className='inline-flex max-lg:mb-[20px] lg:mr-[40px] max-lg:mr-[0px] xl:mr-[70px] font-poppins text-[#45647B] hover:text-green text-[14px] font-medium leading-[142%] uppercase transition-all duration-[0.4s]'><Link to="/">{menu2}</Link></li>
-                                    <li className='inline-flex max-lg:mb-[20px] lg:mr-[40px] max-lg:mr-[0px] xl:mr-[70px] font-poppins text-[#45647B] hover:text-green text-[14px] font-medium leading-[142%] uppercase transition-all duration-[0.4s]'><Link to="/">{menu3}</Link></li>
-                                    <li className='inline-flex font-poppins text-[#45647B] hover:text-green text-[14px] font-medium leading-[142%] uppercase transition-all duration-[0.4s]'><Link to="/">{menu4}</Link></li>
+                                <li className='inline-flex max-lg:mb-[20px] lg:mr-[40px] max-lg:mr-[0px] xl:mr-[70px] font-poppins text-[#45647B] hover:text-green text-[14px] font-medium leading-[142%] uppercase transition-all duration-[0.4s]'>
+                                        <ScrollLink to="about" offset={-75} spy={true} activeClass="active" className='cursor-pointer'>
+                                            {menu1}
+                                        </ScrollLink>
+                                    </li>
+                                    <li className='inline-flex max-lg:mb-[20px] lg:mr-[40px] max-lg:mr-[0px] xl:mr-[70px] font-poppins text-[#45647B] hover:text-green text-[14px] font-medium leading-[142%] uppercase transition-all duration-[0.4s]'>
+                                        <ScrollLink to="sonnet" offset={-75} spy={true} activeClass="active" className='cursor-pointer'>
+                                            {menu2}
+                                        </ScrollLink>
+                                    </li>
+                                    <li className='inline-flex max-lg:mb-[20px] lg:mr-[40px] max-lg:mr-[0px] xl:mr-[70px] font-poppins text-[#45647B] hover:text-green text-[14px] font-medium leading-[142%] uppercase transition-all duration-[0.4s]'>
+                                        <ScrollLink to="results" offset={-75} spy={true} activeClass="active" className='cursor-pointer'>
+                                            {menu3}
+                                        </ScrollLink>
+                                    </li>
+                                    <li className='inline-flex font-poppins text-[#45647B] hover:text-green text-[14px] font-medium leading-[142%] uppercase transition-all duration-[0.4s]'>
+                                        <ScrollLink to="" offset={-75} spy={true} activeClass="active" className='cursor-pointer' onClick={() => openModal("reachout")}>
+                                            {menu4}
+                                        </ScrollLink>
+                                    </li>
                                 </ul>
                             </div>
                             <div className='max-md:mt-[25px] md:mt-[17px]'>
@@ -64,6 +85,9 @@ const Footer = ({ logo, info, menu1, menu2, menu3, menu4, mail, requestbtn, link
 
             {isModalOpen && activeModal === 'request' && (
                 <Requestmodal isOpen={isModalOpen} onClose={closeModal} />
+            )}
+            {isModalOpen && activeModal === 'reachout' && (
+                <Reachoutmodal isOpen={isModalOpen} onClose={closeModal} />
             )}
 
         </>

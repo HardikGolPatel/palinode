@@ -6,6 +6,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+.active {
+  color: #97BB45 !important;
+}
+
 .logo-slider-part .rfm-child {
   margin-right: 72px;
 }
