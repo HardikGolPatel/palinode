@@ -41,7 +41,7 @@ const Header = () => {
         <div className="container">
           <div className="flex justify-between items-center w-full">
             <div className="w-full max-sm:max-w-[120px] max-w-[165px] relative z-[100]">
-              <Link to="/" className="inline-block">
+              <Link to="/" className="inline-block cursor-pointer">
                 <img src={logo} alt="logo" className="object-cover" />
               </Link>
             </div>
